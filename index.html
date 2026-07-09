@@ -1,37 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Birthday Surprise</title>
 
 <style>
-body{
+
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg, #ff6fb5, #d66efd, #9d4edd);
+    background:linear-gradient(135deg,#ff6fb5,#d66efd,#9d4edd);
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
     text-align:center;
     color:white;
+    padding:20px;
 }
 
 .box{
-    background:rgba(255,255,255,0.15);
-    padding:40px;
+    width:100%;
+    max-width:600px;
+    background:rgba(255,255,255,.15);
+    padding:40px 30px;
     border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:24px;
+    line-height:1.6;
+    margin-bottom:30px;
 }
 
 button{
-    padding:15px 35px;
-    font-size:20px;
+    padding:18px 45px;
+    font-size:24px;
     border:none;
-    border-radius:30px;
+    border-radius:35px;
     background:white;
     color:#ff4081;
     cursor:pointer;
+    transition:.3s;
 }
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(255,255,255,.7);
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+    .box{
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    p{
+        font-size:20px;
+    }
+
+    button{
+        width:100%;
+        font-size:22px;
+        padding:16px;
+    }
+
+}
+
 </style>
 
 </head>
@@ -39,10 +94,15 @@ button{
 <body>
 
 <div class="box">
-<h1>Happiest Birthdayy!!!</h1>
-<p>A special surprise is waiting for you.</p>
-<br>
-<button onclick="location.href='page2.html'">Click Here</button>
+    <h1>🎉 Happiest Birthday!!! 🎉</h1>
+
+    <p>
+        A special surprise is waiting just for you. ✨
+    </p>
+
+    <button onclick="location.href='page2.html'">
+        Click Here ❤️
+    </button>
 </div>
 
 </body>
